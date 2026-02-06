@@ -1,0 +1,280 @@
+
+:root {
+    --primary-color: #2563EB;      
+    --primary-hover: #1D4ED8;
+    --secondary-color: #10B981;    
+    --accent-color: #F59E0B;        
+    
+    --bg-body: #F8FAFC;           
+    --bg-card: #FFFFFF;
+    --text-main: #1E293B;         
+    --text-muted: #64748B;       
+    --border-color: #E2E8F0;        
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+body.dark-mode {
+    --bg-body: #0F172A;           
+    --bg-card: #1E293B;             
+    --text-main: #F1F5F9;         
+    --text-muted: #94A3B8;        
+    --border-color: #334155;        
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+a {
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+
+.btn {
+    border-radius: 50px; 
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg) !important;
+}
+
+.form-control, .form-select {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.15);
+}
+
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9) !important; 
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+body.dark-mode .navbar {
+    background-color: rgba(15, 23, 42, 0.9) !important;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-main) !important;
+    font-weight: 600;
+    margin: 0 0.5rem;
+}
+
+.nav-link.active, .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.8), rgba(16, 185, 129, 0.6)), url('../assets/images/hero-bg.jpg') no-repeat center center/cover;
+    height: 85vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+
+.hero-section .overlay {
+    display: none; 
+}
+
+.hero-section h1 {
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-section .lead {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.25rem;
+}
+
+.display-4 {
+    font-size: 2.5rem; 
+}
+
+#jobs {
+    background-color: var(--bg-body) !important;
+}
+
+.table-responsive {
+    background-color: var(--bg-card);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.table {
+    color: var(--text-main);
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: var(--bg-body);
+    color: var(--text-muted);
+    font-weight: 700;
+    border-bottom: 2px solid var(--border-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+.table tbody td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+.badge {
+    padding: 0.5em 0.8em;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.portfolio-item {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    background: rgba(37, 99, 235, 0.9);
+}
+
+footer {
+    background-color: #0F172A !important; 
+    color: #94A3B8 !important;
+}
+
+footer .text-white {
+    color: #F1F5F9 !important;
+}
+
+footer a i {
+    transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+footer a:hover i {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+
+body.dark-mode .bg-light {
+    background-color: var(--bg-body) !important;
+}
+
+body.dark-mode .table-dark {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+}
+
+body.dark-mode .table thead th {
+    background-color: #1e293b;
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .modal-content {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+body.dark-mode .modal-header,
+body.dark-mode .modal-footer {
+    border-color: var(--border-color);
+}
+
+body.dark-mode .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+body.dark-mode .accordion-item {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+body.dark-mode .accordion-button {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+    background-color: rgba(37, 99, 235, 0.2);
+    color: var(--primary-color);
+}
+
+body.dark-mode .accordion-button::after {
+    filter: invert(1);
+}
